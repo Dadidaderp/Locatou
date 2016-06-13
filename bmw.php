@@ -12,7 +12,9 @@
 		<div id="login">
 		<form method= "post" action="login.php">
 		<input type="text" name="login" value="" placeholder="Username or Email"> <input type="password" name="password" value="" placeholder="Password">
-	</div>
+                    <input type="submit" value="Se connecter">
+					<input type="button" name="inscription.php" value="Inscription" onclick="self.location.href='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                </div>
 	
 	<ul id="menu-principal">
 	<li><a href="menu_modeles.php">Location</a>

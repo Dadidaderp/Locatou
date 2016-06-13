@@ -37,7 +37,7 @@
 	</header>
 
 <body>
-    <img class="FemmeTel" src="images/femme_tel.jpg" alt="FemmeTel"/> 
+    <img class="FemmeTel" src="images/femme_tel.jpg" alt="FemmeTel"/>
     <div id="ContactPara">    
         <p>Des questions ? N'hesitez pas !
         Contactez nous par mail ou par telephone.</p>
