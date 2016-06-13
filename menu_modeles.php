@@ -49,7 +49,7 @@
 	</div>
 
 	<div id="mini-logo">
-		<a class="logo" href="mini.php"> <img src="images/mini-logo.png" alt="mini-logo" height="180px"> </a>
+		<a class="logo" href="mini.php"> <img src="images/mini-logo.png" alt="mini-logo" height="170px"> </a>
 	</div>
 
 	<div id="nissan-logo">

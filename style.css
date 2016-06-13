@@ -52,18 +52,11 @@ body{
     text-align: center;
 }
 
-
 #m5 {
 
     position: absolute;
 }
 
-#audi-logo {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin: 65px 10px 170px 692px;
-}
 
 .logo {
 
@@ -91,64 +84,37 @@ body{
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 10px 10px 10px 10px;
+    margin: 1% 10% 100% 9%;
 }
 
-#ferrari-logo {
+#audi-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 500px 10px 100px 39px
-}
-
-#ford-logo {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin: 290px 10px 100px 320px  
-}
-
-#mercedes-logo {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin: 500px 10px 100px 730px;
+    margin: 5% 10% 100% 30%;
 }
 
 #mini-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 10px 10px 100px 250px;
-}
-
-#logo-page-mini {
-    text-align: center;
+    margin: 20% 20% 10% 1%;
 }
 
 #nissan-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 250px 10px 100px 740px;
+    margin: 20% 10% 100% 33%;
+}
+
+
+#logo-page-mini {
+    text-align: center;
 }
 
 #logo-page-nissan {
     margin-left: 35%;
-}
-
-#porshe-logo {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin: 500px 10px 100px 400px
-}
-
-#volkswagen-logo {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin: 250px 10px 10px 10px;  
 }
 
 #menu-demo2, #menu-demo2 ul{
