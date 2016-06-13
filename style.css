@@ -84,28 +84,28 @@ body{
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 1% 10% 100% 9%;
+    margin: 1% 10% 100% 30%;
 }
 
 #audi-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 5% 10% 100% 30%;
+    margin: 5% 10% 100% 50%;
 }
 
 #mini-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 20% 20% 10% 1%;
+    margin: 20% 10% 100% 25%
 }
 
 #nissan-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 20% 10% 100% 33%;
+    margin: 20% 10% 100% 55%;
 }
 
 
