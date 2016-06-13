@@ -29,7 +29,7 @@
 	</li>
 	<li><a href="#">A propos</a>
 		<ul>
-			<li><a href="#">Nous contacter</a></li>
+			<li><a href="contact.php">Nous contacter</a></li>
 			<li><a href="plan_du_site.php">Nos agences</a></li>
 			<li><a href="#">FAQ</a></li>
 		</ul>

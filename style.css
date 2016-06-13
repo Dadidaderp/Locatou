@@ -31,6 +31,21 @@ body{
     border: 1px solid #010101;
 }
 
+.FemmeTel {
+    margin-top: 7%;
+    margin-left: 60%;
+    border: 1px solid #010101;
+}
+
+#ContactPara {
+    margin-top: 1%;
+    margin-left: 20%;
+    border: 1px solid #010101;
+    font-size: x-large;
+    width:570px;
+    height:250px;
+    background-color:#FEFEFE;
+}
 .titre{
     text-align: center;
 }

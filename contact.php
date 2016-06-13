@@ -27,7 +27,7 @@
 	<li><a href="#">A propos</a>
 		<ul>
 			<li><a href="contact.php">Nous contacter</a></li>
-			<li><a href="plan_du_site.php">Nos agences</a></li>
+                        <li><a href="plan_du_site.php">Nos agences</a></li>
 			<li><a href="#">FAQ</a></li>
 		</ul>
 	</li>
@@ -36,11 +36,14 @@
 	
 	</header>
 
-</head>
 <body>
+    <img class="FemmeTel" src="images/femme_tel.jpg" alt="FemmeTel"/> 
+    <div id="ContactPara">    
+        <p>Des questions ? N'hesitez pas !
+        Contactez nous par mail ou par telephone.</p>
+        <p> mail: contact@locatou.com</p>
+        <p> tel: 05.34.54.65.25</p>
+    </div>
 
-    <img class="plan_site" src="images/plan_site_toulouse.png" alt="PlanToulouse"/>
-    
-    </body>
+</body>
 </html>
-
