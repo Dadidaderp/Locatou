@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Locatou</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href= "style.css"/>
+
+	<header>
+		<p class="titre">
+			<a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
+		</p>
+		<div id="login">
+			<form method="post" action="login.php">
+				<input type="text" name="login" value="" placeholder="Email"> <input type="password" name="password" value="" placeholder="Password">
+					<br>
+					<input type="submit" value"Se connecter">
+					<input type="button" name="inscription.php" value="Inscription" onclick="self.location.href='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+			</form>
+		
+	</div>
+	
+	<ul id="menu-demo2">
+	<li><a href="menu_modeles.php">Location</a>
+		<ul>
+			<li><a href="audi.php">Audi</a></li>
+			<li><a href="bmw.php">BMW</a></li>
+			<li><a href="#">Ferrari</a></li>
+			<li><a href="#">Ford</a></li>
+			<li><a href="#">Mercedes</a></li>
+			<li><a href="mini.php">Mini</a></li>
+			<li><a href="nissan.php">Nissan</a></li>
+			<li><a href="#">Porshe</a></li>
+			<li><a href="#">Volkswagen</a></li>
+		</ul>
+	</li>
+	<li><a href="#">A propos</a>
+		<ul>
+			<li><a href="#">Nous contacter</a></li>
+			<li><a href="#">Nos agences</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+	</li>
+	
+</ul>
+	
+	</header>
+
+</head>
+
+<body>
+
+<?php
+	if (isset($_POST["login"]) && $_POST["password"]) {
+		echo $login;
+		echo $password;
+	}
+?>
+
+</body>
+
+</html>s
