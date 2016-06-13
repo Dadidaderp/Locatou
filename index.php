@@ -20,13 +20,8 @@
 		<ul>
 			<li><a href="audi.php">Audi</a></li>
 			<li><a href="bmw.php">BMW</a></li>
-			<li><a href="#">Ferrari</a></li>
-			<li><a href="#">Ford</a></li>
-			<li><a href="#">Mercedes</a></li>
 			<li><a href="mini.php">Mini</a></li>
 			<li><a href="nissan.php">Nissan</a></li>
-			<li><a href="#">Porshe</a></li>
-			<li><a href="#">Volkswagen</a></li>
 		</ul>
 	</li>
 	<li><a href="#">A propos</a>
