@@ -17,7 +17,7 @@
 		</form>
 		</div>
 	
-	<ul id="menu-demo2">
+	<ul id="menu-principal">
 	<li><a href="menu_modeles.php">Location</a>
 		<ul>
 			<li><a href="audi.php">Audi</a></li>
@@ -29,7 +29,7 @@
 	<li><a href="#">A propos</a>
 		<ul>
 			<li><a href="#">Nous contacter</a></li>
-			<li><a href="#">Plan des sites</a></li>
+			<li><a href="plan_du_site.php">Nos agences</a></li>
 			<li><a href="#">FAQ</a></li>
 		</ul>
 	</li>
