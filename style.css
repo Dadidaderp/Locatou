@@ -74,13 +74,13 @@ body{
 .index{
     text-align: center;
     margin-top: 1%;
-    margin-left: 30%;
-    border: 1px solid white;
+    margin-left: 25%;
+    border: 1px solid black;
     font-size: x-large;
     width:50%;
     height:10%;
-    background-color:black;
-    color: white;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .faq{
