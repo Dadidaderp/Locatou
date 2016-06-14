@@ -35,8 +35,9 @@
 </ul>
 	
 	</header>
-
+<img class="sous_titre" src="images/sous_titre.png" alt="SousTitre">
 </head>
+
 <body>
 <div class="slideshow">
 	<ul>
@@ -58,6 +59,10 @@
       }, 3500);
    });
 </script>
+
+    <div class="circle">
+        Louez votre<br> véhicule<br> a partir de 50e
+    </div>
 
 </body>
 </html>

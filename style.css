@@ -50,6 +50,21 @@ body{
     text-align: center;
 }
 
+.sous_titre {
+    text-align: center;
+    margin-left: 29%;
+}
+
+.circle{
+   margin:10px;
+    width:100px;
+    background:#44D2BF;
+    height:100px;
+    text-align:center;
+    border-radius:100px;
+    <strong>line-height: 90px; /* 100 - 10 */</strong>
+}
+
 #login{
     position: absolute;
     margin: -6% 1% 1% 80%;
