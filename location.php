@@ -53,28 +53,43 @@
         <fieldset>
             <legend>Récaptiulatif de votre commande</legend>
             <?php
+            
+            
             $link = mysqli_connect("localhost", "root", "root", "locatou");
+            
+            
+            if($_POST['kilometrage'] == 200){
+                $_POST['prixBase'] = $_POST[prixBase]*2;
+            }
+            
+            if($_POST['kilometrage'] == 300){
+                $_POST['prixBase'] = $_POST[prixBase]*3;
+                
+            }
 
-            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','','','" . $_POST['kilometrage'] . "','')")) {
-
-                if ($_POST[''] != "JJ/MM/AAAA" && $_POST['dureeLocation'] != 0) {
+            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','','','" . $_POST['kilometrage']*$_POST['dureeLocation'] . "','" .$_POST['prixBase']*$_POST['dureeLocation']."')")) {
 
 
                     if (isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])) {
 
-
-                        echo "Durée de la location : " . $_POST['dureeLocation'];
+                        echo "Marque du véhicule loué : " .$_POST['marque'];
+                        echo "<br>";
+                        echo "Modele du véhicule loué : " .$_POST['modele'];
+                        echo "<br>";
+                        echo "<br>";
+                        echo "Durée de la location : " . $_POST['dureeLocation'] . " jours";
                         echo "<br>";
                         echo "Premier jour de la location : " . $_POST['permierJour'];
                         echo "<br>";
                         echo "Votre moyen de paiment : " . $_POST['moyenPaiment'];
                         echo "<br>";
                         echo "Kilometrage total : " . $_POST['dureeLocation'] * $_POST['kilometrage'] . " Km";
-                    } else {
-                        echo "Un champs à été mal renseigné, veuillez recommencer";
-                    }
+                        echo "<br>";
+                        echo "Prix de la location : " .$_POST['prixBase']*$_POST['dureeLocation'] . " €" ;
+                    
                 }
             }
+            
             ?>
 
         </fieldset>
