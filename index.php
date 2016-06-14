@@ -60,6 +60,14 @@
           }, 3500);
        });
     </script>
+    
+    <br>
+    <br>
+    
+<div class="index">
+        Louez votre voiture sportive à partir de 50€ la journée !
+        Notre site vous porpose une séléction de véhicules de qualités pour toujours plus de plaisir sur la route.
+</div>
 
 </body>
 </html>
