@@ -35,7 +35,6 @@
             </li>
 
         </ul>
-
     </header>
     <img class="sous_titre" src="images/sous_titre.png" alt="SousTitre">
 </head>
@@ -64,7 +63,7 @@
 
     <br>
     <br>
-
+<fieldset class="tdi"></fieldset>
     <div class="index">
         Louez votre voiture sportive à partir de 50€ la journée !
         Notre site vous porpose une séléction de véhicules de qualités pour toujours plus de plaisir sur la route.

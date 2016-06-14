@@ -4,6 +4,7 @@ body{
     background-position: left;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    cursor: url("audipixel.png"), default;
 }
 
 p{
@@ -11,6 +12,14 @@ p{
     color: #660033;
 }
 
+.tdi {
+    text-align: center;
+    width: 1px;
+    height: 1px;
+    padding: 5px;
+    border: none;
+    cursor: url("images/zob.png"), default;
+}
 
 form label{
 
