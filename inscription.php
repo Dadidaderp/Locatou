@@ -46,8 +46,12 @@
 
 <?php
 
+        
+
 	
 	$link = mysqli_connect("localhost", "root", "root", "locatou");
+        
+        
 	
 	echo '<br>';
 	echo '<br>';

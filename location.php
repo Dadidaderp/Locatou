@@ -43,37 +43,27 @@
 
 <body>
 
+    <br>
+    <br>
+    <br>
+    
 <div id="location">
-
+    
+    <fieldset>
+        <legend>Récaptiulatif de votre commande</legend>
 <?php
 	
 	$link = mysqli_connect("localhost", "root", "root", "locatou");
-	
-	if($_POST['premierJour']== "JJ/MM/AAAA"){	
-		
-		echo "Le champs Date de location désirée n'a pas été renseigné !<br><br>";
-		
-	}
-	
-	if($_POST['dureeLocation'] == 0) {
-		
-		echo "Le champs Durée de la location n'a pas été renseigné !<br><br>";
-		
-	}
-	
+        
+        if(mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal) VALUES('','".$_POST['permierJour']."','".date('Y-m-d')."','".$_POST['dureeLocation']."','','','".$_POST['kilometrage']."','')")){
 	
 	if($_POST[''] != "JJ/MM/AAAA" && $_POST['dureeLocation'] != 0){
-	
-	
-	
-			echo "<br>";
-			echo "<br>";
+
 	
 			if(isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])){
-				echo "Recapitulatif de votre commande";
-				echo "<br>";
-				echo "<br>";
-				echo "Durée de la location : " . $_POST['dureeLocation'];
+				
+			
+				echo "Durée de la location :" . $_POST['dureeLocation'];
 				echo "<br>";
 				echo "Premier jour de la location : " .$_POST['permierJour'];
 				echo "<br>";
@@ -86,9 +76,13 @@
 			}
 		
 		}
+                
+        }
 	
 	
 ?>
+        
+    </fieldset>
 
 </div>
 
