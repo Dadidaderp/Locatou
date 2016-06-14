@@ -31,7 +31,7 @@
 		<ul>
 			<li><a href="contact.php">Nous contacter</a></li>
 			<li><a href="plan_du_site.php">Nos agences</a></li>
-			<li><a href="#">FAQ</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
 		</ul>
 	</li>
 	
