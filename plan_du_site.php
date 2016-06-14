@@ -39,9 +39,12 @@
 
 </head>
 <body>
-
-    <img class="plan_site" src="images/plan_site_toulouse.png" alt="PlanToulouse"/>
-    
+    <p>
+        <img class="plan_site" src="images/plan_site_toulouse.png" alt="PlanToulouse"/>
+        <p class="textePlanSite">
+            Retrouvez notre équipe au 69 Rue de Mets a Toulouse.
+        </p>
+    </p>
     </body>
 </html>
 
