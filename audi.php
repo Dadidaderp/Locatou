@@ -53,13 +53,13 @@
     <div id="logo-page-audi">
 
         <p><img class="audi" src="images/audi_s1.png" alt="audi-s1" height="260px"><br>
-            <input class="boutonCommander" type="button" name="location.php" value="					Louer ce vehicule					" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
             <img class="audi" src="images/audi_s3.png" alt="audi-s3" height="260px"><br>
-            <input class="boutonCommander" type="button" name="location.php" value="					Louer ce vehicule					" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
             <img class="audi" src="images/audi_s5.png" alt="audi-s5" height="260px"><br>
-            <input class="boutonCommander" type="button" name="location.php" value="					Louer ce vehicule					" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
             <img class="audi" src="images/audi_rs6.png" alt="audi-rs6" height="260px"><br>
-            <input class="boutonCommander" type="button" name="location.php" value="					Louer ce vehicule					" onclick="self.location.href = 'louer.php'" onclick>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick>
 
         </p>
 

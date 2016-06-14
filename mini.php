@@ -60,7 +60,7 @@
 
     </p>
 
-    <input class="bouton" type="button" name="location.php" value="					Louer ce vehicule					" onclick="self.location.href = 'louer.php'" onclick>
+    <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick>
 
 </div>
 

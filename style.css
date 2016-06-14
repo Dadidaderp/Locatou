@@ -328,12 +328,13 @@ legend {
     background-color: #4AB1DE;
     color: black;
     float: center;
+    width: 25%;
 }
 
 .boutonCommander
 {
     height: 30px;
-    width: 355px;
+    width: 100%;
     background-color: #4AB1DE;
     color: black;
     text-align: center;
@@ -342,7 +343,7 @@ legend {
 .inscrit
 {
     height: 30px;
-    width: 400px;
+    width: 100%;
     background-color: #4AB1DE;
     color: black;
     text-align: center;
