@@ -45,7 +45,9 @@
 	</div>
 
 <div id="nissan-gtr">
-	<img src="images/nissan-gtr.png" alt="nissan-gtr" height="300px">
+    <p><img src="images/nissan-gtr.png" alt="nissan-gtr" height="300px"><br>
+            <input class="boutonCommander" type="button" name="location.php" value="				  	                          Louer ce vehicule 					                          " onclick="self.location.href='louer.php'" onclick><br><br>
+        </p>
 </div>
 
 </body>
