@@ -12,6 +12,7 @@
 		<div id="login">
 		<form method= "post" action="login.php">
 			<input type="text" name="login" value="" placeholder="Email"> <input type="password" name="password" value="" placeholder="Password">
+                        <br>
 			<input type="button" name="inscription.php" value="Inscription" onclick="self.location.href='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> <input type="submit" value"Se connecter">
 	</div>
 	
