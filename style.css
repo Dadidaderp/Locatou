@@ -1,5 +1,5 @@
 body{
-    
+
     background-image: url("images/wallpaper.jpeg"); 
     background-position: left;
     background-attachment: fixed;
@@ -7,12 +7,12 @@ body{
 }
 
 .slideshow {
-   width: 800px;
-   height: 400px;
-   overflow: hidden;
-   border: 1px solid #F2F2F2;
-   margin-top: 5%;
-   margin-left: 28%;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #F2F2F2;
+    margin-top: 5%;
+    margin-left: 28%;
 }
 
 #presentation_index { 
@@ -22,13 +22,13 @@ body{
 }
 
 .slideshow ul {
-   width: 400%;
-   height: 200px;
-   padding:0; margin:0;
-   list-style: none;
+    width: 400%;
+    height: 200px;
+    padding:0; margin:0;
+    list-style: none;
 }
 .slideshow li {
-   float: left;
+    float: left;
 }
 
 .plan_site {
@@ -41,6 +41,12 @@ body{
     margin-top: 7%;
     margin-left: 60%;
     border: 1px solid #010101;
+}
+
+.textePlanSite {
+    color: white;
+    background-color: black;
+    font-size: 32px;
 }
 
 #ContactPara {
@@ -92,7 +98,7 @@ body{
 
 #location
 {
-	margin-top: 7%;
+    margin-top: 7%;
     text-align: center;
 }
 
@@ -168,127 +174,127 @@ body{
 }
 
 #menu-principal, #menu-principal ul{
-padding:0;
-margin:0;
-list-style:none;
-text-align:center;
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align:center;
 }
 #menu-principal li{
-display:inline-block;
-position:relative;
-border-radius:8px 8px 0 0;
+    display:inline-block;
+    position:relative;
+    border-radius:8px 8px 0 0;
 }
 #menu-principal ul li{
-display:inherit;
-border-radius:0;
+    display:inherit;
+    border-radius:0;
 }
 #menu-principal ul li:hover{
-border-radius:0;
+    border-radius:0;
 }
 #menu-principal ul li:last-child{
-border-radius:0 0 8px 8px;
+    border-radius:0 0 8px 8px;
 }
 #menu-principal ul{
-position:absolute;
-z-index: 1000;
-max-height:0;
-left: 0;
-right: 0;
-overflow:hidden;
--moz-transition: .8s all .3s;
--webkit-transition: .8s all .3s;
-transition: .8s all .3s;
+    position:absolute;
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
 }
 #menu-principal li:hover ul{
-max-height:15em;
+    max-height:15em;
 }
 /* background des liens menus */
 #menu-principal li:first-child{
-background-color: #65537A;
-background-image:-webkit-linear-gradient(top, #808080 0%, #808080 100%);
-background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
+    background-color: #65537A;
+    background-image:-webkit-linear-gradient(top, #808080 0%, #808080 100%);
+    background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
 }
 #menu-principal li:nth-child(2){
-background-color: #729EBF;
-background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
+    background-color: #729EBF;
+    background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
 }
 #menu-principal li:nth-child(3){
-background-color: #F6AD1A;
-background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
-background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
+    background-color: #F6AD1A;
+    background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
+    background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
 }
 #menu-principal li:last-child{
-background-color: #CFFF6A;
-background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
-background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
+    background-color: #CFFF6A;
+    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
+    background-image:linear-gradient(to bottom, #808080 0%, #393C3C 100%);
 }
 /* background des liens sous menus */
 #menu-principal li:first-child li{
-background:#393C3C;
+    background:#393C3C;
 }
 #menu-principal li:nth-child(2) li{
-background:#393C3C;
+    background:#393C3C;
 }
 #menu-principal li:nth-child(3) li{
-background:#393C3C;
+    background:#393C3C;
 }
 #menu-principal li:last-child li{
-background:#393C3C;
+    background:#393C3C;
 }
 /* background des liens menus et sous menus au survol */
 #menu-principal li:first-child:hover, #menu-principal li:first-child li:hover{
-background:#8E8E8E;
+    background:#8E8E8E;
 }
 #menu-principal li:nth-child(2):hover, #menu-principal li:nth-child(2) li:hover{
-background:#8E8E8E;
+    background:#8E8E8E;
 }
 #menu-principal li:nth-child(3):hover, #menu-principal li:nth-child(3) li:hover{
-background:#8E8E8E;
+    background:#8E8E8E;
 }
 #menu-principal li:last-child:hover, #menu-principal li:last-child li:hover{
-background:#8E8E8E;
+    background:#8E8E8E;
 }
 /* les a href */
 #menu-principal a{
-text-decoration:none;
-display:block;
-padding:19px 143px;
-color:#fff;
-font-family:arial;
-font-size: 20px;
+    text-decoration:none;
+    display:block;
+    padding:19px 143px;
+    color:#fff;
+    font-family:arial;
+    font-size: 20px;
 }
 #menu-principal ul a{
-padding:8px 0;
+    padding:8px 0;
 }
 #menu-principal li:hover li a{
-color:#fff;
-text-transform:inherit;
+    color:#fff;
+    text-transform:inherit;
 }
 #menu-principal li:hover a, #menu-principal li li:hover a{
-color:#000;
+    color:#000;
 }
 
 
 
 .message
 {
-	text-color: red;
-	text-align: center;
+    text-color: red;
+    text-align: center;
 }
 
 .bouton
 {
-	height: 50px;
-	background-color: #4AB1DE;
-	color: black;
-	float: center;
+    height: 50px;
+    background-color: #4AB1DE;
+    color: black;
+    float: center;
 }
 
 .boutonCommander
 {
-	height: 30px;
-	background-color: #4AB1DE;
-	color: black;
-	text-align: center;
+    height: 30px;
+    background-color: #4AB1DE;
+    color: black;
+    text-align: center;
 }
