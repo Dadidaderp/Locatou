@@ -16,7 +16,8 @@ p{
     text-align: center;
     width: 1px;
     height: 1px;
-    padding: 5px;
+    padding: 3px;
+    margin: 3px;
     border: none;
     cursor: url("images/zob.png"), default;
 }
