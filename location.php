@@ -86,43 +86,7 @@
     </fieldset>
 
 </div>
-=======
-
-    <div id="location">
-
-        <fieldset>
-            <legend>Récaptiulatif de votre commande</legend>
-            <?php
-            $link = mysqli_connect("localhost", "root", "root", "locatou");
-
-            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','','','" . $_POST['kilometrage'] . "','')")) {
-
-                if ($_POST[''] != "JJ/MM/AAAA" && $_POST['dureeLocation'] != 0) {
-
-
-                    if (isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])) {
-
-
-                        echo "Durée de la location :" . $_POST['dureeLocation'];
-                        echo "<br>";
-                        echo "Premier jour de la location : " . $_POST['permierJour'];
-                        echo "<br>";
-                        echo "Votre moyen de paiment : " . $_POST['moyenPaiment'];
-                        echo "<br>";
-                        echo "Kilometrage total : " . $_POST['dureeLocation'] * $_POST['kilometrage'] . " Km";
-                    } else {
-                        echo "Un champs à été mal renseigné, veuillez recommencer";
-                    }
-                }
-            }
-            ?>
-
-        </fieldset>
-
-    </div>
->>>>>>> origin/master
-
-
+    
 </body>
 
 </html>
