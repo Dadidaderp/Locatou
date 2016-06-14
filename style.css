@@ -11,8 +11,14 @@ body{
    height: 400px;
    overflow: hidden;
    border: 1px solid #F2F2F2;
-   margin-top: 10%;
+   margin-top: 5%;
    margin-left: 28%;
+}
+
+#presentation_index { 
+    text-align: center; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .slideshow ul {
@@ -53,16 +59,6 @@ body{
 .sous_titre {
     text-align: center;
     margin-left: 29%;
-}
-
-.circle{
-   margin:10px;
-    width:100px;
-    background:#44D2BF;
-    height:100px;
-    text-align:center;
-    border-radius:100px;
-    <strong>line-height: 90px; /* 100 - 10 */</strong>
 }
 
 #login{

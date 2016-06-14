@@ -48,21 +48,17 @@
 		<li><img src="images/audi_s3.png" alt="" width="800" height="400" /></li>
 	</ul>
 </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
- 
-<script type="text/javascript">
-   $(function(){
-      setInterval(function(){
-         $(".slideshow ul").animate({marginLeft:-800},800,function(){
-            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
-         })
-      }, 3500);
-   });
-</script>
-
-    <div class="circle">
-        Louez votre<br> véhicule<br> a partir de 50e
-    </div>
+    
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+    <script type="text/javascript">
+       $(function(){
+          setInterval(function(){
+             $(".slideshow ul").animate({marginLeft:-800},800,function(){
+                $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+             })
+          }, 3500);
+       });
+    </script>
 
 </body>
 </html>
