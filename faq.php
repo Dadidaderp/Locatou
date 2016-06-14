@@ -62,9 +62,6 @@
         Si vous dépassez le kilométrage prévu par jour, vous serrez facturé au pallier supperieur (vallable uniquement si le dépassement de km est conséquant).   
     </div>
     
-    <br>
-    <br>
-    
     <div class="faq">
         "Que se passe t'il si je ramène le véhcule loué en mauvais état ? (Rayures, carrosserie abimé, ...)"
         <br>
