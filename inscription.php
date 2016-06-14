@@ -10,7 +10,7 @@
 		</p>
 		<div id="login">
 			<form method="post" action="login.php">
-				<input type="text" name="login" value="" placeholder="Email"> <input type="password" name="password" value="" placeholder="Password">
+				<input type="text" name="login" value="" placeholder="Email"><br><input type="password" name="password" value="" placeholder="Password">
                                 
 					<br>
 					<input type="submit" value="Se connecter">
