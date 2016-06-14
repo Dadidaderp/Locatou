@@ -43,7 +43,7 @@
 
 
 <div id="logo-page-nissan">
-		<img class="logo" src="images/nissan-logo.png" alt="nissan-logo" height="200px">
+		<img class="logo" src="images/nissan-logo.png" alt="nissan-logo" height="250px">
 	</div>
 
 <div id="nissan-gtr">
