@@ -44,7 +44,7 @@
 <body>
     
     <div class="faq">
-         "Quels sont les conditions à remplir pour pouvoir louer une voiture sur votre site ?"
+         "Quelles sont les conditions à remplir pour pouvoir louer une voiture sur votre site ?"
          <br>
          <br>
         Pour pouvoir louer un véhciule proposé par notre site de location Locatou, il faut :
@@ -55,7 +55,7 @@
     
     
     <div class="faq">
-        "Que ce passe t'il si je dépasse le kilométrage prévu initialement sur le contrat ?"
+        "Que ce passe t-il si je dépasse le kilométrage prévu initialement sur le contrat ?"
         <br>
         <br>
         Notre systeme de kilométrtage est simple, lorsque vous louez une voiture, les palliers kilométriques sont par 100, allant de 100 à 300 Km par jour.

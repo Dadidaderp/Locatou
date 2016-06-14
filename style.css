@@ -50,7 +50,7 @@ body{
     font-size: x-large;
     width:540px;
     height:40px;
-    background-color:#FEFEFE;
+    background-color:#76B2C1;
 }
 
 #ContactPara {
@@ -60,7 +60,7 @@ body{
     font-size: x-large;
     width:570px;
     height:250px;
-    background-color:#FEFEFE;
+    background-color:#76B2C1;
 }
 .titre{
     text-align: center;
@@ -79,7 +79,7 @@ body{
     font-size: x-large;
     width:50%;
     height:10%;
-    background-color: whitesmoke;
+    background-color: #76B2C1;
     color: black;
 }
 
@@ -91,7 +91,7 @@ body{
     font-size: x-large;
     width:50%;
     height:10%;
-    background-color:grey;
+    background-color: #76B2C1;
     color: black;
 }
 
