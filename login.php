@@ -41,21 +41,20 @@
 </head>
 
 <body>
-    
+
     <br>
     <br>
 
-<?php
-	session_start();
-	
-	if (isset($_POST["login"]) && $_POST["password"]) {
-		echo 'Bonjour ' .$_SESSION["login"];
-	} else {
-		
-		echo 'Erreur de connection : le mot de passe ou identifiant est incorrect, veuillez recommencer';
-	
-	}
-?>
+    <?php
+    session_start();
+
+    if (isset($_POST["login"]) && $_POST["password"]) {
+        echo 'Bonjour ' . $_SESSION["login"];
+    } else {
+
+        echo 'Erreur de connection : le mot de passe ou identifiant est incorrect, veuillez recommencer';
+    }
+    ?>
 
 </body>
 
