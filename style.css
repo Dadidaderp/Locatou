@@ -100,6 +100,11 @@ legend {
     margin-left: 29%;
 }
 
+.sous_titre_modele {
+    text-align: center;
+    margin-left: 30%;
+}
+
 .index{
     text-align: center;
     margin-top: 1%;
@@ -173,28 +178,28 @@ legend {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 8% 10% 100% 30%;
+    margin: 4% 10% 100% 30%;
 }
 
 #audi-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 11% 10% 100% 9%;
+    margin: 7% 10% 100% 9%;
 }
 
 #mini-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 9% 10% 100% 45%
+    margin: 5% 10% 100% 45%
 }
 
 #nissan-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 8% 10% 100% 70%;
+    margin: 4% 10% 100% 70%;
 }
 
 
