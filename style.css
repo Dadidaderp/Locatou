@@ -6,6 +6,11 @@ body{
     background-repeat: no-repeat;
 }
 
+p{
+    font-size: x-large;
+    color: #660033;
+}
+
 
 form label{
     
@@ -337,7 +342,7 @@ legend {
 .inscrit
 {
     height: 30px;
-    width: 355px;
+    width: 400px;
     background-color: #4AB1DE;
     color: black;
     text-align: center;

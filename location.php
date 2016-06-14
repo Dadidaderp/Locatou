@@ -63,7 +63,7 @@
 			if(isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])){
 				
 			
-				echo "Durée de la location :" . $_POST['dureeLocation'];
+				echo "Durée de la location : " . $_POST['dureeLocation'];
 				echo "<br>";
 				echo "Premier jour de la location : " .$_POST['permierJour'];
 				echo "<br>";
