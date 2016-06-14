@@ -47,13 +47,13 @@
 
 
         <p><img class="bmw" src="images/bmw_m2.png" alt="bmw_m2" height="250px"><br>
-            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louerM2.php'" onclick><br><br>
             <img class="bmw" src="images/bmw_m3.png" alt="bmw_m3" height="260px"><br>
-            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louerM3.php'" onclick><br><br>
             <img class="bmw" src="images/bmw_m6.png" alt="bmw_m6" height="250px"><br>
-            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'lourM6.php'" onclick><br><br>
             <img class="bmw" src="images/bmw_x6m.png" alt="bmw_x6m" height="250px"><br>
-            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louer.php'" onclick><br><br>
+            <input class="bouton" type="button" name="location.php" value="Louer ce vehicule" onclick="self.location.href = 'louerX6.php'" onclick><br><br>
     </div>
 </p>
 
