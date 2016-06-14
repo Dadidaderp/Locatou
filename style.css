@@ -6,6 +6,29 @@ body{
     background-repeat: no-repeat;
 }
 
+
+form label{
+    
+    display: inline-block;
+    width: 130px;
+}
+
+
+fieldset {
+  margin-bottom: 15px;
+  margin-left: 37%;
+  padding: 10px;
+  width: 25%;
+  font-size: large;
+}
+
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+
 .slideshow {
     width: 800px;
     height: 400px;
@@ -64,6 +87,7 @@ body{
 }
 .titre{
     text-align: center;
+    font-size: x-large;
 }
 
 .sous_titre {
@@ -106,10 +130,12 @@ body{
     text-align: center;
 }
 
-#louer{
 
-    margin-top: 7%;
-    text-align: center;
+
+
+    
+ 
+    
 }
 
 #location
@@ -310,7 +336,18 @@ body{
 .boutonCommander
 {
     height: 30px;
+    width: 355px;
     background-color: #4AB1DE;
     color: black;
     text-align: center;
 }
+
+.inscrit
+{
+    height: 30px;
+    width: 355px;
+    background-color: #4AB1DE;
+    color: black;
+    text-align: center;
+}
+

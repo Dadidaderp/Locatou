@@ -42,42 +42,43 @@
 </head>
 
 <body>
+    
+    <br>
+    <br> 
 
-<div id="louer">
+<div class="louer">
+    
+    
+    
 	<form method="post" action="location.php">
-		<label>Date de location désirée : <input type="text" name="permierJour" value="JJ/MM/AAAA" ></label><br>
-		<label>Durée de la location en jour : <input type="number" name="dureeLocation" value=0></label><br>
-		<label>Kilométre par jour : <select name="kilometrage"></label>
+            <fieldset>
+                <legend>Formulaire de commande</legend>
+		<label>Date de location désirée : </label><input type="text" name="permierJour" autofocus="" required=""pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"><br>
+		<label>Durée de la location en jour : </label><input type="number" name="dureeLocation" autofocus="" required=""><br>
+		<label>Kilomètre par jour : </label><select name="kilometrage">
 									<option>100</option>
 									<option>200</option>
 									<option>300</option>
-									<option>400</option>
-									<option>500</option>
-									<option>600</option>
 									</select>
 									
 									<br>
-									<br>
 									
-		<label>Moyen de paiment : <select name="moyenPaiment"></label>
+									
+		<label>Moyen de paiment : </label><select name="moyenPaiment">
 								  <optgroup label="Choissiez votre moyen de paiment">
 								  <option>Carte bancaire</option>
 								  <option>Espèce</option>
 								  <option>Chèque</option>
 								  </optgroup>
-								  </select> 
-		
-		<br> <br>
-		
-		<label>***Le paiment se fait lors de la livraison de la voiture***</label>
-		
-
-		
-		<br><br>
+                                          </select>
+                <br>
+                <br>
 		
 		<input class="boutonCommander" type="submit" value="Commander"/>
-		
-		</form>
+            </fieldset> 
+        </form>
+    
+</div>
 </body>
 
 </html>

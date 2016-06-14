@@ -65,22 +65,11 @@
 	if($_POST[''] != "JJ/MM/AAAA" && $_POST['dureeLocation'] != 0){
 	
 	
-		if(mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage) VALUES('','".$_POST['permierJour']."','".date('Y-m-d')."','".$_POST['dureeLocation']."','','','')")){
-		
-			echo "Connexion succed";
-		
-		} else {
-		
-			echo "Connexion failed";
-		
-		}
-	
-	
 	
 			echo "<br>";
 			echo "<br>";
 	
-			if(isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment']) && isset($_POST['ville'])){
+			if(isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])){
 				echo "Recapitulatif de votre commande";
 				echo "<br>";
 				echo "<br>";
@@ -89,10 +78,11 @@
 				echo "Premier jour de la location : " .$_POST['permierJour'];
 				echo "<br>";
 				echo "Votre moyen de paiment : " .$_POST['moyenPaiment'];
-				echo "<br>";
-				echo "Ville de livraison du vehicule : " .$_POST['ville'];
+                                echo "<br>";
+                                echo "Kilometrage total : " .$_POST['dureeLocation']*$_POST['kilometrage']. " Km";
+				
 			} else {
-				echo "Oups, vous avez du mal renseigner un champs :(";
+				echo "Un champs à été mal renseigné, veuillez recommencer";
 			}
 		
 		}
