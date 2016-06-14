@@ -13,24 +13,24 @@ p{
 
 
 form label{
-    
+
     display: inline-block;
     width: 130px;
 }
 
 
 fieldset {
-  margin-bottom: 15px;
-  margin-left: 37%;
-  padding: 10px;
-  width: 25%;
-  font-size: large;
+    margin-bottom: 15px;
+    margin-left: 37%;
+    padding: 10px;
+    width: 25%;
+    font-size: large;
 }
 
 legend {
-  padding: 0px 3px;
-  font-weight: bold;
-  font-variant: small-caps;
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
 }
 
 
@@ -173,28 +173,28 @@ legend {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 1% 10% 100% 30%;
+    margin: 8% 10% 100% 30%;
 }
 
 #audi-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 5% 10% 100% 50%;
+    margin: 11% 10% 100% 9%;
 }
 
 #mini-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 20% 10% 100% 25%
+    margin: 9% 10% 100% 45%
 }
 
 #nissan-logo {
     width: 50px;
     height: 50px;
     position: absolute;
-    margin: 20% 10% 100% 55%;
+    margin: 8% 10% 100% 70%;
 }
 
 

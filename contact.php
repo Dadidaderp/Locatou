@@ -42,8 +42,8 @@
     <body>
         <img class="FemmeTel" src="images/femme_tel.jpg" alt="FemmeTel"/>
         <div id="ContactPara">    
-                Des questions ? N'hesitez pas !
-                Contactez nous par mail ou par telephone.
+            Des questions ? N'hesitez pas !
+            Contactez nous par mail ou par telephone.
             <p> mail: contact@locatou.com</p>
             <p> tel: 05.34.54.65.25</p>
         </div>
