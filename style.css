@@ -4,7 +4,6 @@ body{
     background-position: left;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    cursor: url("audipixel.png"), default;
 }
 
 p{
