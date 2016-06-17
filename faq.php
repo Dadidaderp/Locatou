@@ -55,20 +55,20 @@
 
 
     <div class="faq">
-        "Que ce passe t-il si je dépasse le kilométrage prévu initialement sur le contrat ?"
+        "Que se passe-t-il si je dépasse le kilométrage prévu initialement sur le contrat ?"
         <br>
         <br>
-        Notre systeme de kilométrtage est simple, lorsque vous louez une voiture, les palliers kilométriques sont par 100, allant de 100 à 300 Km par jour.
-        Si vous dépassez le kilométrage prévu par jour, vous serrez facturé au pallier supperieur (vallable uniquement si le dépassement de km est conséquant).   
+        Notre système de kilométrage est simple, lorsque vous louez une voiture, les paliers kilométriques sont par 100, allant de 100 à 300 kilomètres par jour.
+        Si vous dépassez le kilométrage prévu par jour, vous serez facturés au palier supérieur (valable uniquement si le dépassement de kilomètres est conséquent).   
     </div>
 
     <div class="faq">
-        "Que se passe t'il si je ramène le véhcule loué en mauvais état ? (Rayures, carrosserie abimé, ...)"
+        "Que se passe-t-il si je ramène le véhicule loué en mauvais état ? (Rayures, carrosserie abimée ...)"
         <br>
         <br>
-        Pour commencer, lors de la livraison du véhicule nous vous demandons une caution de 500€ (chèque, liquide ou carte de crédit acceptés).
-        Si vous ramenez le véhicule en mauvais état, il faudra en premier lieu contacter votre assurance afin de voir ce qu'ils peuvent prendre en charge.
-        Tant que les dommages n'ont pas été remboursés, la caution n'est pas rendu au titulaire du contrat.
+        Pour commencer, lors de la livraison du véhicule nous vous demandons une caution de 500€ (tous les modes de paiement sont acceptés).
+        Si vous ramenez le véhicule en mauvais état, contactez votre assurance.
+        Tant que les dommages n'ont pas été remboursés, la caution n'est pas rendue au titulaire du contrat.
 
     </div>
 
