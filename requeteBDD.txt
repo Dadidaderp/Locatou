@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Sam 18 Juin 2016 à 15:05
+-- Généré le :  Sam 18 Juin 2016 à 15:40
 -- Version du serveur :  5.5.42
 -- Version de PHP :  5.6.10
 
@@ -158,14 +158,15 @@ CREATE TABLE `user` (
   `DelaiPaimentClient` varchar(50) NOT NULL,
   `login` varchar(10) NOT NULL,
   `password` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `user`
 --
 
 INSERT INTO `user` (`CodeClient`, `NomClient`, `PrenomClient`, `CodePostalClient`, `AdresseClient`, `TelephoneClient`, `MailClient`, `MoyenPaimentClient`, `DelaiPaimentClient`, `login`, `password`) VALUES
-(5, 'Cahuzac', 'Leo', '31620', '767 chemin des bousquets', '0695302128', 'leocahuzac@gmail.com', '', '', 'leocahuzac', 'leocahuzac');
+(5, 'Cahuzac', 'Leo', '31620', '767 chemin des bousquets', '0695302128', 'leocahuzac@gmail.com', '', '', 'leocahuzac', 'leocahuzac'),
+(6, 'Jean', 'Dujardin', '60120', 'cannes', '0605040302', 'jeandujardin@gmail.com', '', '', 'jean', 'dujardin');
 
 -- --------------------------------------------------------
 
@@ -255,4 +256,4 @@ ALTER TABLE `Contrat`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `CodeClient` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `CodeClient` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
