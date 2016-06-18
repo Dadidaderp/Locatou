@@ -62,6 +62,7 @@
             <li><a href="#">Mon compte</a>
                 <ul>
                     <li><a href="commandes.php">Mes commandes</a></li>
+                    <li><a href="moncompte.php">Mon compte</a></li>
                 </ul>
             </li>
 

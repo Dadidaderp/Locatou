@@ -58,6 +58,7 @@
             <li><a href="#">Mon compte</a>
                 <ul>
                     <li><a href="commandes.php">Mes commandes</a></li>
+                    <li><a href="moncompte.php">Mon compte</a></li>
                 </ul>
             </li>
 
@@ -74,7 +75,7 @@
     <?php 
     
         $db = mysql_connect('localhost', 'root', 'root'); 
-        mysql_select_db('locatou',$db); 
+        mysql_select_db('locatou',$db);
     
         
         if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['password'])) {

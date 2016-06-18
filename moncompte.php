@@ -39,7 +39,7 @@
                 ?>
         </div>
 
-         <ul id="menu-principal">
+        <ul id="menu-principal">
             <li><a href="menu_modeles.php">Location</a>
                 <ul>
                     <li><a href="audi.php">Audi</a></li>
@@ -69,61 +69,52 @@
 
 <body>
     
-    <br>
-    <br> 
-    
     <?php
     
-        if (isset($_COOKIE['login'])){
-            session_start();
-            $_SESSION['login'] = $_COOKIE['login'];
-}
+        if(isset($_SESSION['login'])) {
     
-        if(!isset($_SESSION['login'])) {
-        echo 'Vous n\'êtes pas connecté, accés interdit !</h1> <meta http-equiv="refresh" content="0; URL=redirection.php">';
+        try
+        {
+	$bdd = new PDO('mysql:host=localhost;dbname=locatou;charset=utf8', 'root', 'root');
+        }
+        
+        catch(Exception $e)
+        {
+        die('Erreur : '.$e->getMessage());
+        }
+
+
+
+
+$reponse = $bdd->query("SELECT * FROM user WHERE login='".$_SESSION['login']."'");
+
+while ($donnees = $reponse->fetch())
+{
+    
+    echo "<div class='location'>";
+    echo "<fieldset>";
+    echo "<legend><strong>Mon Compte</strong></legend><br>";
+    echo "Nom : " .$donnees['NomClient']."<br>";
+    echo "Prenom : " .$donnees['PrenomClient']."<br>";
+    echo "Mon login : ".$donnees['login']."<br>";
+    echo "Mail : ".$donnees['MailClient']."<br>" ;
+    echo "Adresse : ".$donnees['AdresseClient']."<br>";
+    echo "Code postal : " .$donnees['CodePostalClient']."<br>";
+    echo "Téléphone : " .$donnees['TelephoneClient']."<br>";
+    echo "</div>";
+    
+   
+    
 }
+} else {
+            
+             echo 'Vous n\'êtes pas connecté, accés interdit !</h1> <meta http-equiv="refresh" content="0; URL=redirection.php">';
+          
+        }
     
     ?>
-
-    <div class="louer">
-
-        
-
-        <form method="post" action="location.php">
-            <fieldset>
-                <legend>Formulaire de commande</legend>
-                <input type="hidden" name="marque" value="Audi">
-                <input type="hidden" name="modele" value ="S5">
-                <input type="hidden" name="prixBase" value="200">
-                <label>Date de location désirée : </label><input type="text" name="permierJour" autofocus="" required="" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"><br><br>
-                <label>Durée de la location en jour : </label><input type="number" name="dureeLocation" autofocus="" required=""><br><br>
-                <label>Kilomètre par jour : </label><select name="kilometrage">
-                    <option>100</option>
-                    <option>200</option>
-                    <option>300</option>
-                </select>
-
-                <br>
-                <label>Nom du conducteur :</label><input type="text" name ="nom" autofocus="" required=""><br><br>
-                <label>Prenom du conducteur :</label><input type="text" name="prenom" autofocus="" required=""><br><br>
-
-
-                <label>Moyen de paiment : </label><select name="moyenPaiment">
-                    <optgroup label="Choissiez votre moyen de paiment">
-                        <option>Carte bancaire</option>
-                        <option>Espèce</option>
-                        <option>Chèque</option>
-                    </optgroup>
-                </select>
-                <br>
-                <br>
-
-                <input class="boutonCommander" type="submit" value="Commander"/>
-            </fieldset> 
-        </form>
-
-    </div>
+    
+    
 </body>
 
 </html>
-
