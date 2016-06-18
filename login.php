@@ -44,18 +44,18 @@
 
     <br>
     <br>
-
-    <?php
-    session_start();
-
-    if (isset($_POST["login"]) && $_POST["password"]) {
-        echo 'Bonjour ' . $_SESSION["login"];
-    } else {
-
-        echo 'Erreur de connection : le mot de passe ou identifiant est incorrect, veuillez recommencer';
-    }
-    ?>
-
-</body>
-
-</html>
+    
+    <form method="post" action="connexion.php">
+    <fieldset>
+    <legend>Connexion</legend>
+    
+    <label for="pseudo">Pseudo :</label><input name="login" type="text" id="pseudo" autofocus="" required="">
+    <br><br>
+    <label for="password">Mot de Passe :</label><input type="password" name="password" id="password" autofocus="" required="">
+     <p><input type="submit" value="Connexion" /></p></form>
+    </fieldset>
+   
+     
+   
+    </body>
+    </html>

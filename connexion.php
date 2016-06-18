@@ -41,34 +41,45 @@
 </head>
 
 <body>
-    <div class="slideshow">
-        <ul>
-            <img src="images/titre_modeles.png.png">
-            <li><img src="images/audi_s1.png" alt="" width="800" height="400" /></li>
-            <li><img src="images/bmw_m6.png"  alt="" width="800" height="400" /></li>
-            <li><img src="images/bmw_x6m.png" alt="" width="800" height="400" /></li>
-            <li><img src="images/audi_s3.png" alt="" width="800" height="400" /></li>
-        </ul>
-    </div>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
-    <script type="text/javascript">
-                    $(function () {
-                        setInterval(function () {
-                            $(".slideshow ul").animate({marginLeft: -800}, 800, function () {
-                                $(this).css({marginLeft: 0}).find("li:last").after($(this).find("li:first"));
-                            })
-                        }, 3500);
-                    });
-    </script>
-
-    <br>
-    <br>
-<fieldset class="tdi"></fieldset>
-    <div class="index">
-        Louez votre voiture sportive à partir de 50€ la journée !
-        Notre site vous porpose une séléction de véhicules de qualités pour toujours plus de plaisir sur la route.
-    </div>
-
+    
+    <?php 
+    
+        $db = mysql_connect('localhost', 'root', 'root'); 
+        mysql_select_db('locatou',$db); 
+    
+        
+        if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['password'])) {
+            $_POST['password'] = hash("sha256", $_POST['password']);
+            extract($_POST);
+  
+            $sql = "select password from user where login='".$login."'";
+            $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+            $data = mysql_fetch_assoc($req);
+            
+            if($data['password'] != $password) {
+                echo '<div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>Oh Non !</strong> Mauvais login / password. Merci de recommencer !
+                </div>';
+  } else {
+    session_start();
+    $_SESSION['login'] = $login;
+    
+    echo '<div class="alert alert-dismissable alert-success">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <strong>Yes !</strong> Vous etes bien logué, Redirection dans 5 secondes ! <meta http-equiv="refresh" content="5; URL=dashboard">
+  </div>';
+    // ici vous pouvez afficher un lien pour renvoyer
+    // vers la page d'accueil de votre espace membres
+    
+  }    
+} else {
+  $champs = '<p><b>(Remplissez tous les champs pour vous connectez !)</b></p>';
+}
+        
+        
+    ?>   
+    
 </body>
+
 </html>

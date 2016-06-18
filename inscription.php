@@ -52,7 +52,7 @@ $link = mysqli_connect("localhost", "root", "root", "locatou");
 echo '<br>';
 echo '<br>';
 
-if (mysqli_query($link, "INSERT INTO user(CodeClient,MotDePasse,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient) 	VALUES('','" . $_POST['pass'] . "','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','')")) {
+if (mysqli_query($link, "INSERT INTO user(CodeClient,MotDePasse,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient,login,password ) 	VALUES('','" . $_POST['pass'] . "','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','','','')")) {
 
     echo '<p class="message">Votre inscription à bien été prise en compte</p>';
 } else {
