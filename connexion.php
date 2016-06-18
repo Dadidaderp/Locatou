@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <?php
+    session_start();
 ?>
 <html>
     <head>
@@ -11,13 +11,32 @@
         <p class="titre">
             <a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
         </p>
-        <div id="login">
+         <div id="login">
             
                 
                 <br>
-                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
-                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
-            </form>                                                                                                                                                                                        
+                
+                <?php
+                
+                if(!isset($_SESSION['login'])) {
+                    ?>
+                
+                    <input type="button" name="inscription" value="Inscription" onclick="self.location.href ='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                    <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+                    
+                <?php
+                
+                } else {
+                    echo 'Bonjour ' . $_SESSION['login'];
+                    echo '<br>';
+                ?>
+                    <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
+                
+                <?php 
+                
+                }
+                
+                ?>
         </div>
 
         <ul id="menu-principal">
@@ -62,24 +81,32 @@
             $data = mysql_fetch_assoc($req);
             
             if($data['password'] != $password) {
+                
                 echo '<div class="connexionFailed">
                 <fieldset>
                 <legend>Echec de connexion</legend>
+                <strong>Mauvais login / mot de passe. Merci de recommencer ! </strong>
                 </filedset>
                 </div>';
                 
   } else {
+      
+    
+      
     session_start();
     $_SESSION['login'] = $login;
     
+    
     echo '<div class="connexionSucced">
     <fieldset>
+    <legend>Connexion réussie</legend>
     <strong>Vous etes bien connecté, Redirection dans 5 secondes !</strong> <meta http-equiv="refresh" content="5; URL=index.php">
     </fieldset>
     </div>';
     
   }    
 } else {
+  $champs = '<p>Remplissez tous les champs pour vous connectez !</p>';
 }
         
         
