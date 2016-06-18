@@ -59,7 +59,7 @@
             if($_POST['kilometrage'] == 200){
                 $_POST['prixBase'] = $_POST[prixBase]*2;
             } else if($_POST['kilometrage'] == 300){
-                $_POST['prixBase'] = $_POST[prixBase]*3;   
+                $_POST['prixBase'] = $_POST[prixBase]*3;
             }
 
             if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','','','" . $_POST['kilometrage']*$_POST['dureeLocation'] . "','" .$_POST['prixBase']*$_POST['dureeLocation']."')")) {
