@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Sam 18 Juin 2016 à 14:41
+-- Généré le :  Sam 18 Juin 2016 à 15:05
 -- Version du serveur :  5.5.42
 -- Version de PHP :  5.6.10
 
@@ -148,7 +148,6 @@ CREATE TABLE `PrixLocation` (
 
 CREATE TABLE `user` (
   `CodeClient` int(10) NOT NULL,
-  `MotDePasse` varchar(20) NOT NULL,
   `NomClient` varchar(50) NOT NULL,
   `PrenomClient` varchar(50) NOT NULL,
   `CodePostalClient` varchar(50) NOT NULL,
@@ -159,15 +158,14 @@ CREATE TABLE `user` (
   `DelaiPaimentClient` varchar(50) NOT NULL,
   `login` varchar(10) NOT NULL,
   `password` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`CodeClient`, `MotDePasse`, `NomClient`, `PrenomClient`, `CodePostalClient`, `AdresseClient`, `TelephoneClient`, `MailClient`, `MoyenPaimentClient`, `DelaiPaimentClient`, `login`, `password`) VALUES
-(1, '', '', '', '', '', '', '', '', '', '', ''),
-(3, 'leo', 'leo', 'leo', 'leo', 'leo', '0695302128', 'leo', '', '', 'leo', 'leo');
+INSERT INTO `user` (`CodeClient`, `NomClient`, `PrenomClient`, `CodePostalClient`, `AdresseClient`, `TelephoneClient`, `MailClient`, `MoyenPaimentClient`, `DelaiPaimentClient`, `login`, `password`) VALUES
+(5, 'Cahuzac', 'Leo', '31620', '767 chemin des bousquets', '0695302128', 'leocahuzac@gmail.com', '', '', 'leocahuzac', 'leocahuzac');
 
 -- --------------------------------------------------------
 
@@ -234,7 +232,8 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`CodeClient`),
   ADD UNIQUE KEY `MailClient` (`MailClient`),
   ADD UNIQUE KEY `TelephoneClient` (`TelephoneClient`),
-  ADD UNIQUE KEY `CodeClient` (`CodeClient`);
+  ADD UNIQUE KEY `CodeClient` (`CodeClient`),
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- Index pour la table `Véhicule`
@@ -256,4 +255,4 @@ ALTER TABLE `Contrat`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `CodeClient` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `CodeClient` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;

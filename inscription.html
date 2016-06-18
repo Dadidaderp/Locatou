@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Locatou</title>
@@ -9,13 +10,12 @@
             <a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
         </p>
         <div id="login">
-            <form method="post" action="login.php">
-                <input type="text" name="login" value="" placeholder="Email"><br><input type="password" name="password" value="" placeholder="Password">
+            
+                
                 <br>
-                <input type="submit" value="Se connecter">
-                <input type="button" name="inscription.php" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
-            </form>
-
+                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+                                                                                                                                                                                                   
         </div>
 
         <ul id="menu-principal">
@@ -23,13 +23,8 @@
                 <ul>
                     <li><a href="audi.php">Audi</a></li>
                     <li><a href="bmw.php">BMW</a></li>
-                    <li><a href="#">Ferrari</a></li>
-                    <li><a href="#">Ford</a></li>
-                    <li><a href="#">Mercedes</a></li>
                     <li><a href="mini.php">Mini</a></li>
                     <li><a href="nissan.php">Nissan</a></li>
-                    <li><a href="#">Porshe</a></li>
-                    <li><a href="#">Volkswagen</a></li>
                 </ul>
             </li>
             <li><a href="#">A propos</a>
@@ -41,10 +36,12 @@
             </li>
 
         </ul>
-
     </header>
-</head>
-<body>
+    <img class="sous_titre" src="images/sous_titre.png" alt="SousTitre">
+    
+    </head>
+
+    <body>
 
     <br>
     <br>
@@ -60,7 +57,8 @@
                 <label>Code postal : </label><input type="text" name="codePostal" required=""/><br/>
                 <label>Téléphone : </label><input type="tel" name="telephone" pattern="06[0-9]{8}" required=""><br/>
                 <label>Adresse e-mail : </label><input type="text" name="email" required=""/><br/>
-                <label>Mot de passe : </label><input type="password" name="pass" required=""/><br><br>
+                <label>Login : </label><input type="text" name="login" required=""/><br/>
+                <label>Mot de passe : </label><input type="password" name="password" required=""/><br><br>
                 <input class="inscrit" type="submit" name="inscris" value="Je m'inscris"/>
             </fieldset>
         </form>

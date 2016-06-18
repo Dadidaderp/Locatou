@@ -10,12 +10,12 @@
             <a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
         </p>
         <div id="login">
-            <form method= "post" action="login.php">
-                <input type="text" name="login" value="" placeholder="Email"><br><input type="password" name="password" value="" placeholder="Password"> 
+            
+                
                 <br>
-                <input type="button" name="inscription.php" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> <input type="submit" value"Se connecter">
-            </form>
-
+                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+            </form>                                                                                                                                                                                        
         </div>
 
         <ul id="menu-principal">
@@ -36,8 +36,8 @@
             </li>
 
         </ul>
-
     </header>
+    
     <img class="sous_titre" src="images/sous_titre.png" alt="SousTitre">
 </head>
 

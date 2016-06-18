@@ -42,6 +42,9 @@
 
 <body>
     
+    <br>
+    <br>
+    
     <?php 
     
         $db = mysql_connect('localhost', 'root', 'root'); 
@@ -49,7 +52,7 @@
     
         
         if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['password'])) {
-            $_POST['password'] = hash("sha256", $_POST['password']);
+            //$_POST['password'] = hash("sha256", $password);
             extract($_POST);
   
             $sql = "select password from user where login='".$login."'";
@@ -57,20 +60,23 @@
             $data = mysql_fetch_assoc($req);
             
             if($data['password'] != $password) {
-                echo '<div class="alert alert-dismissable alert-danger">
-                <button type="button" class="close" data-dismiss="alert">x</button>
-                <strong>Oh Non !</strong> Mauvais login / password. Merci de recommencer !
+                echo '<div class="connexionFailed">
+                <fieldset>
+                <legend>Echec de connexion</legend>
+                <strong>Mauvais login / password. Merci de recommencer ! </strong>
+                </filedset>
                 </div>';
+                
   } else {
     session_start();
     $_SESSION['login'] = $login;
     
-    echo '<div class="alert alert-dismissable alert-success">
-  <button type="button" class="close" data-dismiss="alert">×</button>
-  <strong>Yes !</strong> Vous etes bien logué, Redirection dans 5 secondes ! <meta http-equiv="refresh" content="5; URL=dashboard">
-  </div>';
-    // ici vous pouvez afficher un lien pour renvoyer
-    // vers la page d'accueil de votre espace membres
+    echo '<div class="connexionSucced">
+    <fieldset>
+    <legend>Connexion réussi</legend>
+    <strong>Vous etes bien connecté, Redirection dans 5 secondes !</strong> <meta http-equiv="refresh" content="5; URL=index.php">
+    </fieldset>
+    </div>';
     
   }    
 } else {

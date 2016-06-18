@@ -21,6 +21,16 @@ p{
     cursor: url("images/zob.png"), default;
 }
 
+.connexionFailed
+{
+ text-align: center;
+}
+
+.connexionSucced
+{
+    text-align: center;
+}
+
 form label{
 
     display: inline-block;
@@ -350,8 +360,17 @@ legend {
 {
     height: 30px;
     width: 100%;
-    background-color: #4AB1DE;
+    background-color: green;
     color: black;
+    text-align: center;
+}
+
+.boutonConnexion
+{
+    height:40px;
+    width: 100%;
+    color: black;
+    background-color: #3cb371;
     text-align: center;
 }
 
@@ -363,3 +382,4 @@ legend {
     color: black;
     text-align: center;
 }
+

@@ -9,14 +9,12 @@
             <a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
         </p>
         <div id="login">
-            <form method="post" action="login.php">
-                <input type="text" name="login" value="" placeholder="Email"><br><input type="password" name="password" value="" placeholder="Password">
-
+            
+                
                 <br>
-                <input type="submit" value="Se connecter">
-                <input type="button" name="inscription.php" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
-            </form>
-
+                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+            </form>                                                                                                                                                                                        
         </div>
 
         <ul id="menu-principal">
@@ -37,7 +35,6 @@
             </li>
 
         </ul>
-
     </header>
 
 </head>
@@ -52,7 +49,7 @@ $link = mysqli_connect("localhost", "root", "root", "locatou");
 echo '<br>';
 echo '<br>';
 
-if (mysqli_query($link, "INSERT INTO user(CodeClient,MotDePasse,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient,login,password ) 	VALUES('','" . $_POST['pass'] . "','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','','','')")) {
+if (mysqli_query($link, "INSERT INTO user(CodeClient,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient,login,password ) 	VALUES('','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','','".$_POST['login']."','".$_POST['password']."')")) {
 
     echo '<p class="message">Votre inscription à bien été prise en compte</p>';
 } else {
