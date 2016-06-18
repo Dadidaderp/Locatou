@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Sam 18 Juin 2016 à 17:00
+-- Généré le :  Sam 18 Juin 2016 à 18:34
 -- Version du serveur :  5.5.42
 -- Version de PHP :  5.6.10
 
@@ -43,7 +43,7 @@ CREATE TABLE `Contrat` (
   `PrixTotal` double NOT NULL COMMENT 'Prix total de la location',
   `MarqueContrat` varchar(10) NOT NULL,
   `ModeleContrat` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `Contrat`
@@ -109,7 +109,13 @@ INSERT INTO `Contrat` (`NumeroContrat`, `PremierJourContrat`, `DateContrat`, `Du
 (99, '20/03/2017', '2016-06-14', '1', '', '', 300, 600, '', ''),
 (100, '20/03/2017', '2016-06-14', '4', '', '', 1200, 2400, '', ''),
 (101, '20/03/2017', '2016-06-14', '1', '', '', 200, 700, '', ''),
-(102, '20/03/2017', '2016-06-14', '1', '', '', 100, 450, '', '');
+(102, '20/03/2017', '2016-06-14', '1', '', '', 100, 450, '', ''),
+(125, '20/08/2016', '2016-06-18', '4', '', '', 800, 1600, 'BMW', 'M2'),
+(126, '20/03/2017', '2016-06-18', '3', '', '', 300, 150, 'Mini', 'GP'),
+(127, '20/03/2017', '2016-06-18', '6', 'Agier', 'Maeva', 600, 300, 'Mini', 'GP'),
+(128, '20/03/2017', '2016-06-18', '3', '', 'Maeva', 300, 150, 'Mini', 'GP'),
+(129, '20/03/2017', '2016-06-18', '4', 'Cahuzac', 'Leo', 800, 400, 'Mini', 'GP'),
+(130, '20/03/2017', '2016-06-18', '4', 'Cahuzac', 'Leo', 800, 2400, 'Audi', 'RS6');
 
 -- --------------------------------------------------------
 
@@ -141,15 +147,14 @@ CREATE TABLE `user` (
   `DelaiPaimentClient` varchar(50) NOT NULL,
   `login` varchar(10) NOT NULL,
   `password` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `user`
 --
 
 INSERT INTO `user` (`CodeClient`, `NomClient`, `PrenomClient`, `CodePostalClient`, `AdresseClient`, `TelephoneClient`, `MailClient`, `MoyenPaimentClient`, `DelaiPaimentClient`, `login`, `password`) VALUES
-(5, 'Cahuzac', 'Leo', '31620', '767 chemin des bousquets', '0695302128', 'leocahuzac@gmail.com', '', '', 'leocahuzac', 'leocahuzac'),
-(6, 'Jean', 'Dujardin', '60120', 'cannes', '0605040302', 'jeandujardin@gmail.com', '', '', 'jean', 'dujardin');
+(9, 'Lauze', 'Marc', '31000', 'blagnac', '0605040302', 'marclauze@gmail.com', '', '', 'Marc', 'lauze');
 
 -- --------------------------------------------------------
 
@@ -234,9 +239,9 @@ ALTER TABLE `Véhicule`
 -- AUTO_INCREMENT pour la table `Contrat`
 --
 ALTER TABLE `Contrat`
-  MODIFY `NumeroContrat` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=125;
+  MODIFY `NumeroContrat` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=131;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `CodeClient` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `CodeClient` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
