@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>    
+    
 <html>
     <head>
         <title>Locatou</title>
@@ -8,13 +12,32 @@
         <p class="titre">
             <a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
         </p>
-        <div id="login">
+       <div id="login">
             
                 
                 <br>
-                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
-                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
-            </form>                                                                                                                                                                                        
+                
+                <?php
+                
+                if(!isset($_SESSION['login'])) {
+                    ?>
+                
+                    <input type="button" name="inscription" value="Inscription" onclick="self.location.href ='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                    <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+                    
+                <?php
+                
+                } else {
+                    echo 'Bonjour ' . $_SESSION['login'];
+                    echo '<br>';
+                ?>
+                    <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
+                
+                <?php 
+                
+                }
+                
+                ?>
         </div>
 
         <ul id="menu-principal">
@@ -41,13 +64,19 @@
 
 
 
+<body>
+    
+    <br>
+    <br>
+    
+
 <?php
+
 $link = mysqli_connect("localhost", "root", "root", "locatou");
 
-
-
-echo '<br>';
-echo '<br>';
+$_SESSION['login'] = $_POST['login'];
+$_SESSION['nom'] = $_POST['nom'];
+$_SESSION['prenom'] = $_POST['prenom'];
 
 if (mysqli_query($link, "INSERT INTO user(CodeClient,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient,login,password ) 	VALUES('','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','','".$_POST['login']."','".$_POST['password']."')")) {
 
@@ -62,16 +91,10 @@ echo '<br>';
 
 mysqli_close($link);
 
-/* if (isset($_POST["pass"]) && isset($_POST["pass2"]) && isset($_POST["email"])) {
-
-
-  echo " pass: ".$_POST["pass"];
-  echo '<br>';
-  echo " pass2: ".$_POST["pass2"];
-  echo '<br>';
-  echo " email: ".$_POST["email"];
-
-  } */
 ?>
+    
+    
+</body>
+
 
 </html>

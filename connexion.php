@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php
+?>
 <html>
     <head>
         <title>Locatou</title>
@@ -63,7 +65,6 @@
                 echo '<div class="connexionFailed">
                 <fieldset>
                 <legend>Echec de connexion</legend>
-                <strong>Mauvais login / password. Merci de recommencer ! </strong>
                 </filedset>
                 </div>';
                 
@@ -73,14 +74,12 @@
     
     echo '<div class="connexionSucced">
     <fieldset>
-    <legend>Connexion réussi</legend>
     <strong>Vous etes bien connecté, Redirection dans 5 secondes !</strong> <meta http-equiv="refresh" content="5; URL=index.php">
     </fieldset>
     </div>';
     
   }    
 } else {
-  $champs = '<p><b>(Remplissez tous les champs pour vous connectez !)</b></p>';
 }
         
         

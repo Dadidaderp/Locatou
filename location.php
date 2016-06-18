@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html>
     <head>
         <title>Locatou</title>
@@ -12,9 +15,28 @@
             
                 
                 <br>
-                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
-                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
-            </form>                                                                                                                                                                                        
+                
+                <?php
+                
+                if(!isset($_SESSION['login'])) {
+                    ?>
+                
+                    <input type="button" name="inscription" value="Inscription" onclick="self.location.href ='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                    <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+                    
+                <?php
+                
+                } else {
+                    echo 'Bonjour ' . $_SESSION['login'];
+                    echo '<br>';
+                ?>
+                    <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
+                
+                <?php 
+                
+                }
+                
+                ?>
         </div>
 
         <ul id="menu-principal">
@@ -50,6 +72,7 @@
 
         <fieldset>
             <legend>Récaptiulatif de votre commande</legend>
+            
             <?php
             
             
@@ -61,9 +84,8 @@
             } else if($_POST['kilometrage'] == 300){
                 $_POST['prixBase'] = $_POST[prixBase]*3;
             }
-
-            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','','','" . $_POST['kilometrage']*$_POST['dureeLocation'] . "','" .$_POST['prixBase']*$_POST['dureeLocation']."')")) {
-
+            
+            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal,MarqueContrat,ModeleContrat) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','".$_POST['nom']."','".$_POST['prenom']."','" . $_POST['kilometrage']*$_POST['dureeLocation'] . "','" .$_POST['prixBase']*$_POST['dureeLocation']."','".$_POST['marque']."','".$_POST['modele']."')")) {
 
                     if (isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])) {
                         
@@ -72,7 +94,10 @@
                         echo "Modele du véhicule loué : " .$_POST['modele'];
                         echo "<br>";
                         echo "<br>";
-                        echo "Durée de la location : " . $_POST['dureeLocation'] . " jours";
+                        echo "Nom du conducteur : " .$_POST['nom'];
+                        echo "<br>";
+                        echo "Prenom du conducteur : " .$_POST['prenom'];
+                        echo "<br><br>";                        echo "Durée de la location : " . $_POST['dureeLocation'] . " jours";
                         echo "<br>";
                         echo "Premier jour de la location : " . $_POST['permierJour'];
                         echo "<br>";

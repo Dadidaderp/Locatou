@@ -1,6 +1,7 @@
 <?php
     session_start();
 ?>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Locatou</title>
@@ -63,56 +64,24 @@
 
 <body>
     
-    <br>
-    <br> 
-    
-    <?php
-    
-        if(!isset($_SESSION['login'])) {
-        echo 'Vous n\'êtes pas connecté, accés interdit !</h1> <meta http-equiv="refresh" content="0; URL=redirection.php">';
-}
-    
-    ?>
-
-    <div class="louer">
-
-        
-
-        <form method="post" action="location.php">
-            <fieldset>
-                <legend>Formulaire de commande</legend>
-                <input type="hidden" name="marque" value="BMW">
-                <input type="hidden" name="modele" value ="X6M">
-                <input type="hidden" name="prixBase" value="450">
-                <label>Date de location désirée : </label><input type="text" name="permierJour" autofocus="" required="" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"><br><br>
-                <label>Durée de la location en jour : </label><input type="number" name="dureeLocation" autofocus="" required=""><br><br>
-                <label>Kilomètre par jour : </label><select name="kilometrage">
-                    <option>100</option>
-                    <option>200</option>
-                    <option>300</option>
-                </select>
-
-                <br>
-                <label>Nom du conducteur :</label><input type="text" name ="nom" autofocus="" required=""><br><br>
-                <label>Prenom du conducteur :</label><input type="text" name="prenom" autofocus="" required=""><br><br>
-
-
-                <label>Moyen de paiment : </label><select name="moyenPaiment">
-                    <optgroup label="Choissiez votre moyen de paiment">
-                        <option>Carte bancaire</option>
-                        <option>Espèce</option>
-                        <option>Chèque</option>
-                    </optgroup>
-                </select>
-                <br>
-                <br>
-
-                <input class="boutonCommander" type="submit" value="Commander"/>
-            </fieldset> 
-        </form>
-
+    <div class="error">
+        Vous n'êtes pas connécté ! Connectez vous ou inscrivez vous pour accéder à cette page !
+        <br>
     </div>
+    
+    <br>
+    <br>
+    
+    <form method="post" action="connexion.php">
+    <fieldset>
+    <legend>Connexion</legend>
+    
+    <label for="pseudo">Pseudo :</label><input name="login" type="text" id="pseudo" autofocus="" required="">
+    <br><br>
+    <label for="password">Mot de Passe :</label><input type="password" name="password" id="password" autofocus="" required="">
+     <p><input class="boutonConnexion" type="submit" value="Connexion" /></p></form>
+    </fieldset>
+    
 </body>
 
 </html>
-

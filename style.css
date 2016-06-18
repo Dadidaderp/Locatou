@@ -31,6 +31,11 @@ p{
     text-align: center;
 }
 
+.deconnection
+{
+    text-align: center;
+}
+
 form label{
 
     display: inline-block;
@@ -109,7 +114,8 @@ legend {
     height:250px;
     background-color:#76B2C1;
 }
-.titre{
+.titre
+{
     text-align: center;
     font-size: x-large;
 }
@@ -148,9 +154,24 @@ legend {
     color: black;
 }
 
+.error
+{
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 25%;
+    border: 1px solid black;
+    font-size: x-large;
+    width:50%;
+    height:10%;
+    background-color: red;
+    color: black;
+}
+
 #login{
     position: absolute;
     margin: -6% 1% 1% 80%;
+    font-size: large;
+    color: darkblue;
 }
 
 #regist{

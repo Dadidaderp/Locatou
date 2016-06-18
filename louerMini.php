@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,9 +17,28 @@
             
                 
                 <br>
-                <input type="button" name="inscription" value="Inscription" onclick="self.location.href = 'inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
-                <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
-            </form>                                                                                                                                                                                        
+                
+                <?php
+                
+                if(!isset($_SESSION['login'])) {
+                    ?>
+                
+                    <input type="button" name="inscription" value="Inscription" onclick="self.location.href ='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+                    <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
+                    
+                <?php
+                
+                } else {
+                    echo 'Bonjour ' . $_SESSION['login'];
+                    echo '<br>';
+                ?>
+                    <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
+                
+                <?php 
+                
+                }
+                
+                ?>
         </div>
 
         <ul id="menu-principal">
@@ -44,6 +67,14 @@
     
     <br>
     <br> 
+    
+    <?php
+    
+        if(!isset($_SESSION['login'])) {
+        echo 'Vous n\'êtes pas connecté, accés interdit !</h1> <meta http-equiv="refresh" content="0; URL=redirection.php">';
+}
+    
+    ?>
 
     <div class="louer">
 
@@ -64,6 +95,8 @@
                 </select>
 
                 <br>
+                <label>Nom du conducteur :</label><input type="text" name ="nom" autofocus="" required=""><br><br>
+                <label>Prenom du conducteur :</label><input type="text" name="prenom" autofocus="" required=""><br><br>
 
 
                 <label>Moyen de paiment : </label><select name="moyenPaiment">

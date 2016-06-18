@@ -1,6 +1,10 @@
-<?php
+﻿<?php
     session_start();
+    session_unset();
+    session_destroy();
+    header('Location: login.php');
 ?>
+
 <html>
     <head>
         <title>Locatou</title>
@@ -63,56 +67,14 @@
 
 <body>
     
-    <br>
-    <br> 
-    
-    <?php
-    
-        if(!isset($_SESSION['login'])) {
-        echo 'Vous n\'êtes pas connecté, accés interdit !</h1> <meta http-equiv="refresh" content="0; URL=redirection.php">';
-}
-    
-    ?>
-
-    <div class="louer">
-
+    <div class="deconnection">
+        <fieldset>
+            <legend>Deconnection réussie</legend>
+            <strong>Vous êtes à présent déconnecté ! Redirection dans 5 secondes</strong> <meta http-equiv="refresh" content="5; URL=index.php">
+        </fieldset>
         
-
-        <form method="post" action="location.php">
-            <fieldset>
-                <legend>Formulaire de commande</legend>
-                <input type="hidden" name="marque" value="BMW">
-                <input type="hidden" name="modele" value ="X6M">
-                <input type="hidden" name="prixBase" value="450">
-                <label>Date de location désirée : </label><input type="text" name="permierJour" autofocus="" required="" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"><br><br>
-                <label>Durée de la location en jour : </label><input type="number" name="dureeLocation" autofocus="" required=""><br><br>
-                <label>Kilomètre par jour : </label><select name="kilometrage">
-                    <option>100</option>
-                    <option>200</option>
-                    <option>300</option>
-                </select>
-
-                <br>
-                <label>Nom du conducteur :</label><input type="text" name ="nom" autofocus="" required=""><br><br>
-                <label>Prenom du conducteur :</label><input type="text" name="prenom" autofocus="" required=""><br><br>
-
-
-                <label>Moyen de paiment : </label><select name="moyenPaiment">
-                    <optgroup label="Choissiez votre moyen de paiment">
-                        <option>Carte bancaire</option>
-                        <option>Espèce</option>
-                        <option>Chèque</option>
-                    </optgroup>
-                </select>
-                <br>
-                <br>
-
-                <input class="boutonCommander" type="submit" value="Commander"/>
-            </fieldset> 
-        </form>
-
-    </div>
+    
 </body>
 
-</html>
 
+</html>
