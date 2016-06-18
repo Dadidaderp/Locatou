@@ -11,6 +11,21 @@ p{
     color: #660033;
 }
 
+f
+{
+    color: red;
+}
+
+g{
+    
+}
+
+h1
+{
+    text-align: center;
+    color: black; 
+}
+
 .tdi {
     text-align: center;
     width: 1px;
@@ -137,7 +152,7 @@ legend {
     border: 1px solid black;
     font-size: x-large;
     width:50%;
-    height:10%;
+    height:6%;
     background-color: #76B2C1;
     color: black;
 }
@@ -150,6 +165,19 @@ legend {
     font-size: x-large;
     width:50%;
     height:10%;
+    background-color: #76B2C1;
+    color: black;
+}
+
+.recap
+{
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 25%;
+    border: 1px solid black;
+    font-size: x-large;
+    width:50%;
+    height:20%;
     background-color: #76B2C1;
     color: black;
 }
@@ -180,10 +208,15 @@ legend {
     text-align: center;
 }
 
-#location
+.location
 {
     margin-top: 7%;
-    text-align: center;
+    color: black;
+    height: 26%;
+    color:#333A40 ;
+    
+    
+    
 }
 
 #m5 {
@@ -402,5 +435,12 @@ legend {
     background-color: #4AB1DE;
     color: black;
     text-align: center;
+}
+
+.page
+{
+    background-color:white ;
+    width:100px ;
+    
 }
 

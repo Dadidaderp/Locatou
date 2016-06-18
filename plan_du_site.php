@@ -41,7 +41,7 @@
                 ?>
         </div>
 
-        <ul id="menu-principal">
+         <ul id="menu-principal">
             <li><a href="menu_modeles.php">Location</a>
                 <ul>
                     <li><a href="audi.php">Audi</a></li>
@@ -55,6 +55,11 @@
                     <li><a href="contact.php">Nous contacter</a></li>
                     <li><a href="plan_du_site.php">Nos agences</a></li>
                     <li><a href="faq.php">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mon compte</a>
+                <ul>
+                    <li><a href="commandes.php">Mes commandes</a></li>
                 </ul>
             </li>
 

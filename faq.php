@@ -56,6 +56,11 @@
                     <li><a href="faq.php">FAQ</a></li>
                 </ul>
             </li>
+            <li><a href="#">Mon compte</a>
+                <ul>
+                    <li><a href="commandes.php">Mes commandes</a></li>
+                </ul>
+            </li>
 
         </ul>
     </header>
