@@ -1,7 +1,6 @@
 <?php
     session_start();
 ?>
-<!DOCTYPE html>
 <html>
     <head>
         <title>Locatou</title>
@@ -46,7 +45,7 @@
                 ?>
         </div>
 
-         <ul id="menu-principal">
+        <ul id="menu-principal">
             <li><a href="menu_modeles.php">Location</a>
                 <ul>
                     <li><a href="audi.php">Audi</a></li>
@@ -71,26 +70,61 @@
 
         </ul>
     </header>
-    
     <img class="sous_titre" src="images/sous_titre.png" alt="SousTitre">
 </head>
 
 <body>
+    
+    <?php
+    
+        if($_SESSION['admin']!=1) {
+            echo '<div class="error"><br> <strong>Page reservé aux administrateurs !</strong>';
+            echo '<meta http-equiv="refresh" content="5; URL=index.php"></div>';
+            
+        } else {
+            
+            try
+        {
+	$bdd = new PDO('mysql:host=localhost;dbname=locatou;charset=utf8', 'root', 'root');
+        }
+        
+        catch(Exception $e)
+        {
+        die('Erreur : '.$e->getMessage());
+        }
+            
+        $reponse = $bdd->query("SELECT * FROM Contrat");
+        
+        while ($donnees = $reponse->fetch()){
+            echo "<div class='location'>";
+            echo "<fieldset>";
+            echo "<legend>Commande numéro <f><strong>" .$donnees['NumeroContrat']."</strong></f></legend>";
+            echo "<br>";
+            echo "Marque du véhicule loué : " .$donnees['MarqueContrat'];
+            echo "<br>";
+            echo "Modele du véhicule loué : " .$donnees['ModeleContrat'];
+            echo '<br>';
+            echo "<br>";
+            echo "Nom du conducteur : " .$donnees['NomConducteur'];
+            echo "<br>";
+            echo "Prenom du conducteur : " .$donnees['PrenomConducteur'];
+            echo "<br><br>";                        
+            echo "Durée de la location : " . $donnees['DureeLocation'] . " jours";
+            echo "<br>";
+            echo "Premier jour de la location : " . $donnees['PremierJourContrat'];
+            echo "<br>";
+            echo "Kilometrage total : " .$donnees['Kilometrage'] . " Km";
+            echo "<br>";
+            echo "Prix de la location : " .$donnees['PrixTotal']. " €" ;
+            echo "<br><br>";
+    
+            echo "</div>";
+        
+        }
+        }
+    
+    ?>
+    
+</body>
 
-    <br>
-    <br>
-    
-    <form method="post" action="connexion.php">
-    <fieldset>
-    <legend>Connexion</legend>
-    
-    <label for="pseudo">Pseudo :</label><input name="login" type="text" id="pseudo" autofocus="" required="">
-    <br><br>
-    <label for="password">Mot de Passe :</label><input type="password" name="password" id="password" autofocus="" required="">
-     <p><input class="boutonConnexion" type="submit" value="Connexion" /></p></form>
-    </fieldset>
-   
-     
-   
-    </body>
-    </html>
+</html>

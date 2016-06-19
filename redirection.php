@@ -34,7 +34,13 @@
                     <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
                 
                 <?php 
-                
+                    
+                    if($_SESSION['admin']==1)
+                    {
+                        ?>
+                        <br><input class="inscrit" type="button" value="Administration" onclick="self.location.href='admin.php'">
+                <?php
+                }
                 }
                 
                 ?>

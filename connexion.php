@@ -33,7 +33,13 @@
                     <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
                 
                 <?php 
-                
+                    
+                    if($_SESSION['admin']==1)
+                    {
+                        ?>
+                        <br><input class="inscrit" type="button" value="Administration" onclick="self.location.href='admin.php'">
+                <?php
+                }
                 }
                 
                 ?>
@@ -97,11 +103,14 @@
                 
   } else {
       
-    
-      
     session_start();
     $_SESSION['login'] = $login;
     
+    $sql = "select admin from user where login = '".$login."'";
+    $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+    $data = mysql_fetch_assoc($req);
+    
+    $_SESSION['admin']=$data['admin'];
     
     echo '<div class="connexionSucced">
     <fieldset>
