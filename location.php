@@ -103,7 +103,7 @@
             
             
             
-            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal,MarqueContrat,ModeleContrat,ClientContrat) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','".$_POST['nom']."','".$_POST['prenom']."','" . $_POST['kilometrage']*$_POST['dureeLocation'] . "','" .$_POST['prixBase']*$_POST['dureeLocation']."','".$_POST['marque']."','".$_POST['modele']."','".$_SESSION['login']."')")) {
+            if (mysqli_query($link, "INSERT INTO Contrat(NumeroContrat,PremierJourContrat,DateContrat,DureeLocation,NomConducteur,PrenomConducteur,Kilometrage,PrixTotal,MarqueContrat,ModeleContrat,ClientContrat,MoyenPaiment) VALUES('','" . $_POST['permierJour'] . "','" . date('Y-m-d') . "','" . $_POST['dureeLocation'] . "','".$_POST['nom']."','".$_POST['prenom']."','" . $_POST['kilometrage']*$_POST['dureeLocation'] . "','" .$_POST['prixBase']*$_POST['dureeLocation']."','".$_POST['marque']."','".$_POST['modele']."','".$_SESSION['login']."','".$_POST['moyenPaiment']."')")) {
 
                     if (isset($_POST['dureeLocation']) && isset($_POST['permierJour']) && isset($_POST['moyenPaiment'])) {
                         
@@ -112,11 +112,11 @@
                         $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
                         $data = mysql_fetch_assoc($req);
                         
-                        echo 'Votre numéro de contrat :<f><strong>' . $data['NumeroContrat']. '</strong></f>';
+                        echo 'Votre numéro de commande :<f><strong>' . $data['NumeroContrat']. '</strong></f>';
                         echo '<br><br>';
                         echo 'Marque du véhicule loué : ' .$_POST['marque'];
                         echo '<br>';
-                        echo 'Modele du véhicule loué : ' .$_POST['modele'];
+                        echo 'Modèle du véhicule loué : ' .$_POST['modele'];
                         echo '<br>';
                         echo "<br>";
                         echo "Nom du conducteur : " .$_POST['nom'];

@@ -121,6 +121,11 @@ while ($donnees = $reponse->fetch())
     echo "Kilometrage total : " .$donnees['Kilometrage'] . " Km";
     echo "<br>";
     echo "Prix de la location : " .$donnees['PrixTotal']. " €" ;
+    echo "<br>";
+    if($donnees['MoyenPaiment']=="ChÃ¨que"){
+        $donnees['MoyenPaiment']="Chèque";
+    }
+    echo "Moyen de paiement : " .$donnees['MoyenPaiment'];
     echo "<br><br>";
     
     echo "</div>";
