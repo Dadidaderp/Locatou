@@ -84,18 +84,23 @@
 
 <?php
 
+if(!isset($_SESSION['login'])&&isset($_POST['login'])) {
+
 $link = mysqli_connect("localhost", "root", "root", "locatou");
 
-$_SESSION['login'] = $_POST['login'];
-$_SESSION['nom'] = $_POST['nom'];
-$_SESSION['prenom'] = $_POST['prenom'];
+if($_POST['login']=="admin"||$_POST['login']=="Admin2"){
+    $admin=1;
+} else {
+    $admin=0;
+}
 
-if (mysqli_query($link, "INSERT INTO user(CodeClient,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient,login,password ) 	VALUES('','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','','".$_POST['login']."','".$_POST['password']."')")) {
-
-    echo '<p class="message">Votre inscription à bien été prise en compte</p>';
+if (mysqli_query($link, "INSERT INTO user(CodeClient,NomClient,PrenomClient,CodePostalClient,AdresseClient,TelephoneClient,MailClient,MoyenPaimentClient,DelaiPaimentClient,login,password,admin ) 	VALUES('','" . $_POST['nom'] . "','" . $_POST['prenom'] . "','" . $_POST['codePostal'] . "','" . $_POST['adresse'] . "','" . $_POST['telephone'] . "','" . $_POST['email'] . "','','','".$_POST['login']."','".$_POST['password']."','".$admin."')")) {
+    echo '<div class="valider">';
+    echo '<br>Votre inscription à bien été prise en compte';
+    echo '</div>';
 } else {
 
-    echo '<p class= "message">Inscription impossible, un compte possèdant cette adresse mail ou numéro de téléphone est déjà existant</p>';
+    echo '<div class= "error"><br>Inscription impossible, un compte possèdant cette adresse mail ou numéro de téléphone est déjà existant</div>';
 }
 
 echo '<br>';
@@ -103,9 +108,16 @@ echo '<br>';
 
 mysqli_close($link);
 
+} else {
+    
+    echo '<meta http-equiv="refresh" content="0; URL=index.php">';
+    
+    }
+
 ?>
     
-    
+
+        
 </body>
 
 

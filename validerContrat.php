@@ -75,15 +75,15 @@
 
 <body>
     
-    <div class="commandes">
+    <?php
     
-    <h1>Récapitulatif de vos commandes</h1>
-    
-    <?php 
-    
-        if(isset($_SESSION['login'])) {
-    
-        try
+        if($_SESSION['admin']!=1) {
+            echo '<div class="error"><br> <strong>Page reservé aux administrateurs !</strong>';
+            echo '<meta http-equiv="refresh" content="5; URL=index.php"></div>';
+            
+        } else {
+            
+            try
         {
 	$bdd = new PDO('mysql:host=localhost;dbname=locatou;charset=utf8', 'root', 'root');
         }
@@ -92,67 +92,17 @@
         {
         die('Erreur : '.$e->getMessage());
         }
-
-
-
-
-$reponse = $bdd->query("SELECT * FROM Contrat WHERE ClientContrat='".$_SESSION['login']."'");
-
-
-while ($donnees = $reponse->fetch())
-{
-    echo "<div class=''>";
-    echo "<fieldset>";
-    echo "<legend>Commande numéro <f><strong>" .$donnees['NumeroContrat']."</strong></f></legend>";
-    echo "<br>";
-    echo "Marque du véhicule loué : " .$donnees['MarqueContrat'];
-    echo "<br>";
-    echo "Modele du véhicule loué : " .$donnees['ModeleContrat'];
-    echo '<br>';
-    echo "<br>";
-    echo "Nom du conducteur : " .$donnees['NomConducteur'];
-    echo "<br>";
-    echo "Prenom du conducteur : " .$donnees['PrenomConducteur'];
-    echo "<br><br>";                        
-    echo "Durée de la location : " . $donnees['DureeLocation'] . " jours";
-    echo "<br>";
-    echo "Premier jour de la location : " . $donnees['PremierJourContrat'];
-    echo "<br>";
-    echo "Kilometrage total : " .$donnees['Kilometrage'] . " Km";
-    echo "<br>";
-    echo "Prix de la location : " .$donnees['PrixTotal']. " €" ;
-    echo "<br>";
-    if($donnees['MoyenPaiment']=="ChÃ¨que"){
-        $donnees['MoyenPaiment']="Chèque";
-    }
-    echo "Moyen de paiement : " .$donnees['MoyenPaiment'];
-    echo "<br><br>";
-    echo "Validation de la commande :";
-    if($donnees['validation']==1){
-        echo "<strong><v>Validée</v></strong>";
-    } else {
-        echo "<br>";
-        echo "<strong>En attente<strong>";
-    }
-    echo "<br><br>";
-    
-    echo "</div>";
-    
-    
-}      
-
-        } else {
-            
-             echo 'Vous n\'êtes pas connecté, accés interdit !</h1> <meta http-equiv="refresh" content="0; URL=redirection.php">';
-          
+        
+        $bdd->query('UPDATE Contrat SET validation="1" WHERE NumeroContrat="'.$_POST['statut'].'"');
+        
+        echo '<div class="valider">';
+        echo '<br><strong>Commande validée !</strong>';
+        echo '<meta http-equiv="refresh" content="3; URL=admin.php">';
+        echo '</div>';
+        
         }
         
- ?>       
-        
-    <br>    
-    
-    
-    </div>    
+    ?>
     
 </body>
 

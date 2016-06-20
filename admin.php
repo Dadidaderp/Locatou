@@ -75,6 +75,41 @@
 
 <body>
     
+    <br><br>
+    
+    <fieldset>
+            <legend><strong>Rechercher des commandes par</strong></legend>
+            
+            
+                <form method="post" action="recherche.php">
+                    <label>Numero</label>
+                    <input type="text" name="code" required="">
+                    <input type="submit" name="rechercher" value="Rechercher">
+                </form>
+            
+                <form method="post" action="recherche.php">
+                    <label>Conducteur (nom)</label>
+                    <input type="text" name="nom" required="">
+                    <input type="submit" name="rechercher" value="Rechercher">
+                </form>
+            
+                <form method="post" action="recherche.php">
+                    <label>Date de location</label>
+                    <input type="text" name="date" required="" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+                    <input type="submit" name="rechercher" value="Rechercher">
+                </form>
+                
+            
+    </fieldset>
+    <br><br>
+    <div class="commandes">
+        
+        <br>
+
+        <h1>Toutes les commandes</h1>
+        
+        <br>
+    
     <?php
     
         if($_SESSION['admin']!=1) {
@@ -122,13 +157,34 @@
             }
             echo "Moyen de paiement : " .$donnees['MoyenPaiment'];
             echo "<br><br>";
-    
+            echo "Validation de la commande  ";
+            if($donnees['validation']==1){
+                echo "<strong><v>Validée</v></strong>";
+                echo "<br>";
+            } else {
+                echo "<br>";
+                echo "<strong>En attente<strong>";
+                echo"<br>";
+                echo '<br>';
+                echo '<form method="post" action="validerContrat.php">';
+                echo '<input type="hidden" name="statut" value="'.$donnees['NumeroContrat'].'">';
+                echo '<input class="inscrit" type="submit" name="valider" value="Valider la commande">';
+                echo '</form>'; 
+            }
+            
+            echo '<br>';
+            echo '<form method="post" action="supprimerContrat.php">';
+            echo '<input type="hidden" name="statut" value="'.$donnees['NumeroContrat'].'">';
+            echo '<input class="supprimer" type="submit" name="supprimer" value="Supprimer la commande">';
+            echo '</form>';
             echo "</div>";
         
         }
         }
     
     ?>
+        <br>
+    </div>
     
 </body>
 

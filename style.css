@@ -16,7 +16,9 @@ f
     color: red;
 }
 
-g{
+v
+{
+    color: green;
     
 }
 
@@ -182,6 +184,16 @@ legend {
     color: black;
 }
 
+.commandes
+{
+    background-color: #76B2C1;
+    width: 60%;
+    margin-left: 20%;
+    border: 1px solid black;
+}
+
+
+
 .error
 {
     text-align: center;
@@ -193,6 +205,19 @@ legend {
     height:10%;
     background-color: red;
     color: black;
+}
+
+.valider
+{
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 25%;
+    border: 1px solid black;
+    font-size: x-large;
+    width:50%;
+    height:10%;
+    background-color: green;
+    color: black;    
 }
 
 #login{
@@ -210,13 +235,8 @@ legend {
 
 .location
 {
-    margin-top: 7%;
+    
     color: black;
-    height: 26%;
-    color:#333A40 ;
-    
-    
-    
 }
 
 #m5 {
@@ -435,6 +455,17 @@ legend {
     background-color: #4AB1DE;
     color: black;
     text-align: center;
+}
+
+.supprimer
+{
+    height: 30px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: large;
+    
 }
 
 .page
