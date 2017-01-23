@@ -1,6 +1,6 @@
 body{
 
-    background-image: url("images/wallpaper.jpeg"); 
+    background-image: url("images/wallpaper.jpeg");
     background-position: left;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -19,23 +19,13 @@ f
 v
 {
     color: green;
-    
+
 }
 
 h1
 {
     text-align: center;
-    color: black; 
-}
-
-.tdi {
-    text-align: center;
-    width: 1px;
-    height: 1px;
-    padding: 3px;
-    margin: 3px;
-    border: none;
-    cursor: url("images/zob.png"), default;
+    color: black;
 }
 
 .connexionFailed
@@ -84,10 +74,10 @@ legend {
     margin-left: 29%;
 }
 
-#presentation_index { 
-    text-align: center; 
-    padding: 0; 
-    margin: 0; 
+#presentation_index {
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .slideshow ul {
@@ -217,7 +207,7 @@ legend {
     width:50%;
     height:10%;
     background-color: green;
-    color: black;    
+    color: black;
 }
 
 #login{
@@ -235,7 +225,7 @@ legend {
 
 .location
 {
-    
+
     color: black;
 }
 
@@ -465,13 +455,12 @@ legend {
     color: white;
     text-align: center;
     font-size: large;
-    
+
 }
 
 .page
 {
     background-color:white ;
     width:100px ;
-    
-}
 
+}

@@ -12,28 +12,28 @@
             <a href="index.php"> <img src="images/titre.png" alt="Titre" /> </a>
         </p>
         <div id="login">
-            
-                
+
+
                 <br>
-                
+
                 <?php
-                
+
                 if(!isset($_SESSION['login'])) {
                     ?>
-                
-                    <input type="button" name="inscription" value="Inscription" onclick="self.location.href ='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick> 
+
+                    <input type="button" name="inscription" value="Inscription" onclick="self.location.href ='inscription.html'" style="background-color:#3cb371" style="color:white; font-weight:bold"onclick>
                     <input type="button" name="login" value="Se connecter" onclick="self.location.href='login.php'">
-                    
+
                 <?php
-                
+
                 } else {
                     echo 'Bonjour ' . $_SESSION['login'];
                     echo '<br>';
                 ?>
                     <input class="inscrit" type="button" value="Deconnection" onclick="self.location.href='deconnection.php'">
-                
-                <?php 
-                    
+
+                <?php
+
                     if($_SESSION['admin']==1)
                     {
                         ?>
@@ -41,7 +41,7 @@
                 <?php
                 }
                 }
-                
+
                 ?>
         </div>
 
@@ -84,7 +84,7 @@
         </ul>
     </div>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script type="text/javascript">
                     $(function () {
                         setInterval(function () {
@@ -97,7 +97,6 @@
 
     <br>
     <br>
-<fieldset class="tdi"></fieldset>
     <div class="index">
         Louez votre voiture sportive à partir de 50€ la journée !
         Notre site vous porpose une séléction de véhicules de qualités pour toujours plus de plaisir sur la route.
